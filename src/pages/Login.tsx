@@ -34,7 +34,7 @@ export default function Login() {
       <Seo title="Sign In - Vista Guard Pro" description="Secure access to your security management system" />
       <div className="min-h-screen flex bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_60%)] animate-pulse"></div>
         
         {/* Left Side - Branding */}
         <div className="hidden lg:flex flex-1 items-center justify-center p-12 relative">
