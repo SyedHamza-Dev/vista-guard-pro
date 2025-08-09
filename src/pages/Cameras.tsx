@@ -117,7 +117,7 @@ export default function Cameras() {
               <Settings className="w-4 h-4 mr-2" />
               Settings
             </Button>
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600">
+            <Button className="bg-gradient-to-r from-sky-600 to-blue-600">
               <Camera className="w-4 h-4 mr-2" />
               Add Camera
             </Button>
@@ -167,8 +167,8 @@ export default function Cameras() {
         {/* Search and Filters */}
         <Card className="border-0 shadow-sm bg-white">
           <CardContent className="p-6">
-            <div className="flex gap-4">
-              <div className="flex-1">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div className="flex-1 min-w-[240px]">
                 <div className="relative">
                   <Search className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
                   <Input
@@ -179,8 +179,10 @@ export default function Cameras() {
                   />
                 </div>
               </div>
-              <Button variant="outline">Filter by Status</Button>
-              <Button variant="outline">Filter by Location</Button>
+              <div className="flex gap-3 shrink-0">
+                <Button variant="outline">Filter by Status</Button>
+                <Button variant="outline">Filter by Location</Button>
+              </div>
             </div>
           </CardContent>
         </Card>

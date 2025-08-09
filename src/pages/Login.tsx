@@ -32,17 +32,17 @@ export default function Login() {
   return (
     <>
       <Seo title="Sign In - Vista Guard Pro" description="Secure access to your security management system" />
-      <div className="min-h-screen flex bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen flex bg-gradient-to-br from-slate-50 via-sky-50 to-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_60%)] animate-pulse"></div>
         
         {/* Left Side - Branding */}
         <div className="hidden lg:flex flex-1 items-center justify-center p-12 relative">
           <div className="max-w-md text-center text-white">
-            <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-2xl">
+            <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-600 flex items-center justify-center shadow-2xl">
               <Shield className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-300 to-sky-300 bg-clip-text text-transparent">
               Vista Guard Pro
             </h1>
             <p className="text-xl text-blue-200 mb-8 leading-relaxed">
@@ -54,7 +54,7 @@ export default function Login() {
                 <span>Real-time Camera Monitoring</span>
               </div>
               <div className="flex items-center gap-3 text-blue-200">
-                <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                <div className="w-2 h-2 rounded-full bg-sky-400"></div>
                 <span>Intelligent Event Detection</span>
               </div>
               <div className="flex items-center gap-3 text-blue-200">
@@ -69,7 +69,7 @@ export default function Login() {
         <div className="flex-1 flex items-center justify-center p-8">
           <Card className="w-full max-w-md shadow-2xl bg-white/95 backdrop-blur border-0">
             <CardHeader className="text-center pb-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center lg:hidden">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500 to-sky-600 flex items-center justify-center lg:hidden">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-slate-900">Welcome Back</h2>
@@ -120,7 +120,7 @@ export default function Login() {
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-[1.02]"
+                  className="w-full h-12 bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-700 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-[1.02]"
                 >
                   {loading ? (
                     <div className="flex items-center gap-2">

@@ -116,8 +116,8 @@ export default function Events() {
                 <CardTitle className="text-lg">Event Filters</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-col md:flex-row gap-4">
-                  <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div className="flex-1 min-w-[240px]">
                     <div className="relative">
                       <Search className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
                       <Input
@@ -128,31 +128,31 @@ export default function Events() {
                       />
                     </div>
                   </div>
-                  
-                  <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
-                    <PopoverTrigger asChild>
-                      <Button variant="outline" className="w-full md:w-auto justify-start">
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {date ? format(date, "MMM dd, yyyy") : "Select date"}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="end">
-                      <Calendar
-                        mode="single"
-                        selected={date}
-                        onSelect={(newDate) => {
-                          setDate(newDate);
-                          setIsCalendarOpen(false);
-                        }}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  
-                  <Button variant="outline">
-                    <Filter className="mr-2 h-4 w-4" />
-                    More Filters
-                  </Button>
+                  <div className="flex gap-3 shrink-0">
+                    <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
+                      <PopoverTrigger asChild>
+                        <Button variant="outline" className="w-full md:w-auto justify-start">
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {date ? format(date, "MMM dd, yyyy") : "Select date"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="end">
+                        <Calendar
+                          mode="single"
+                          selected={date}
+                          onSelect={(newDate) => {
+                            setDate(newDate);
+                            setIsCalendarOpen(false);
+                          }}
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <Button variant="outline">
+                      <Filter className="mr-2 h-4 w-4" />
+                      More Filters
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -172,7 +172,7 @@ export default function Events() {
                   <Download className="mr-2 h-4 w-4" />
                   Export as CSV
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600">
+                <Button className="w-full bg-gradient-to-r from-sky-600 to-blue-600">
                   <Download className="mr-2 h-4 w-4" />
                   Generate PDF Report
                 </Button>
